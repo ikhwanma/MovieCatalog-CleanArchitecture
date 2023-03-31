@@ -4,6 +4,7 @@ import com.example.moviecatalog.core.data.Resource
 import com.example.moviecatalog.core.domain.model.Movie
 import kotlinx.coroutines.flow.Flow
 
+@Suppress("unused", "unused", "unused", "unused", "unused", "unused")
 interface IMovieRepository {
     fun getAllPopularMovie(apiKey: String): Flow<Resource<List<Movie>>>
     fun getFavoriteMovie(): Flow<List<Movie>>

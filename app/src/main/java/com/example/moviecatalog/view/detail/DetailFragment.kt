@@ -1,5 +1,3 @@
-@file:Suppress("LiftReturnOrAssignment")
-
 package com.example.moviecatalog.view.detail
 
 import android.annotation.SuppressLint
@@ -44,7 +42,7 @@ class DetailFragment : Fragment(), View.OnClickListener {
         val imgUrl = baseUrl + data.posterPath
         isFavorite = data.isFavorite
 
-        setTextButton(isFavorite)
+        setTextButton()
 
         with(binding) {
             tvName.text = data.originalTitle
@@ -54,8 +52,8 @@ class DetailFragment : Fragment(), View.OnClickListener {
         }
     }
 
-    private fun setTextButton(favorite: Boolean) {
-        if (favorite) {
+    private fun setTextButton() {
+        if (isFavorite) {
             val txtButton = "Remove From Favorite"
             binding.btnFavorite.text = txtButton
         } else {
@@ -71,17 +69,17 @@ class DetailFragment : Fragment(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when (p0?.id) {
             R.id.btn_favorite -> {
-                if (isFavorite) {
+                isFavorite = if (isFavorite) {
                     viewModel.setFavorite(data, false)
                     Toast.makeText(requireContext(), "Removed From Favorite", Toast.LENGTH_SHORT)
                         .show()
-                    setTextButton(false)
-                    isFavorite = false
+                    setTextButton()
+                    false
                 } else {
                     viewModel.setFavorite(data, true)
                     Toast.makeText(requireContext(), "Added to Favorite", Toast.LENGTH_SHORT).show()
-                    setTextButton(true)
-                    isFavorite = true
+                    setTextButton()
+                    true
                 }
             }
         }

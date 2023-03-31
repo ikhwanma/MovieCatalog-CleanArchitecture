@@ -1,9 +1,12 @@
+@file:Suppress("unused")
+
 package com.example.moviecatalog.core.data.source.local.entity
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+@Suppress("unused", "unused", "unused", "unused", "unused", "unused")
 @Entity(tableName = "movie")
 data class MovieEntity(
     @PrimaryKey

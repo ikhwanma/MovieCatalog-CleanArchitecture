@@ -1,6 +1,5 @@
 package com.example.moviecatalog.core.ui
 
-import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,12 +13,10 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
     private val listData = ArrayList<Movie>()
     var onItemClick: ((Movie) -> Unit)? = null
 
-    @SuppressLint("NotifyDataSetChanged")
     fun setData(newListData: List<Movie>?){
         if (newListData == null) return
         listData.clear()
         listData.addAll(newListData)
-        notifyDataSetChanged()
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =

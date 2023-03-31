@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">MovieCatalog</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="movie_name">Movie Name</string>
     <string name="overview">Overview</string>
     <string name="add_to_favorite">Add to Favorite</string>

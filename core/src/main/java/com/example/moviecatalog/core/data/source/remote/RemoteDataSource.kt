@@ -7,7 +7,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
-
+@Suppress("unused")
 class RemoteDataSource(private val apiService: ApiService) {
     suspend fun getPopularMovie(apiKey: String): Flow<ApiResponse<List<GetPopularMovieResponseItem>>>{
         return flow{
