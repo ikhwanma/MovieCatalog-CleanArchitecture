@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:src="@drawable/ic_launcher_background"
             android:scaleType="fitXY"
-            />
+            android:contentDescription="@string/image" />
     </androidx.cardview.widget.CardView>
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_name"

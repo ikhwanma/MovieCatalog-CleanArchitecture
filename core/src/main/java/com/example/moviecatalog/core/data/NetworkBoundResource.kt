@@ -3,6 +3,7 @@ package com.example.moviecatalog.core.data
 import com.example.moviecatalog.core.data.source.remote.network.ApiResponse
 import kotlinx.coroutines.flow.*
 
+@Suppress("EmptyMethod")
 abstract class NetworkBoundResource<ResultType, RequestType> {
     private var result: Flow<Resource<ResultType>> = flow{
         emit(Resource.Loading())
