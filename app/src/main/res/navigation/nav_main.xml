@@ -27,6 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
+        app:moduleName=":favorite"
         android:name="com.example.moviecatalog.favorite.presentation.FavoriteFragment"
         android:label="fragment_favorite"
         tools:layout="@layout/fragment_favorite" >

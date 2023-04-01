@@ -69,17 +69,17 @@ class DetailFragment : Fragment(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when (p0?.id) {
             R.id.btn_favorite -> {
-                isFavorite = if (isFavorite) {
+                if (isFavorite) {
                     viewModel.setFavorite(data, false)
                     Toast.makeText(requireContext(), "Removed From Favorite", Toast.LENGTH_SHORT)
                         .show()
+                    isFavorite = false
                     setTextButton()
-                    false
                 } else {
                     viewModel.setFavorite(data, true)
                     Toast.makeText(requireContext(), "Added to Favorite", Toast.LENGTH_SHORT).show()
+                    isFavorite = true
                     setTextButton()
-                    true
                 }
             }
         }

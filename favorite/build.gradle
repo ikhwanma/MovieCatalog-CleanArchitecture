@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.dynamic-feature'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
 }
 
 apply from: '../shared_dependencies.gradle'
@@ -26,10 +28,18 @@ android {
     buildFeatures{
         viewBinding true
     }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
 }
 
 dependencies {
     implementation project(":app")
     implementation project(":core")
-
 }
