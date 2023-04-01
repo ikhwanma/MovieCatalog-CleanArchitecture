@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="EntryPointsManager">
+    <pattern value="com.example.moviecatalog.core.data.source.remote.response.GetPopularMovieResponse" />
+    <pattern value="com.example.moviecatalog.core.data.source.remote.response.GetPopularMovieResponse" method="GetPopularMovieResponse" />
+    <pattern value="com.example.moviecatalog.core.data.source.remote.response.GetPopularMovieResponseItem" />
+    <pattern value="com.example.moviecatalog.core.data.source.remote.response.GetPopularMovieResponseItem" method="GetPopularMovieResponseItem" />
+    <pattern value="com.example.moviecatalog.core.ui.MovieAdapter.ViewHolder" method="bind" />
+    <pattern value="com.example.moviecatalog.core.ui.MovieAdapter" />
+    <pattern value="com.example.moviecatalog.core.ui.MovieAdapter.ViewHolder" />
+    <pattern value="com.example.moviecatalog.core.ui.MovieAdapter.ViewHolder" method="ViewHolder" />
+    <pattern value="com.example.moviecatalog.core.data.Resource" method="Resource" />
+    <pattern value="com.example.moviecatalog.core.data.source.remote.RemoteDataSource" method="RemoteDataSource" />
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
